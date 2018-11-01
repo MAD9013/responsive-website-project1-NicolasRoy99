@@ -1,128 +1,215 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway|Montserrat';
 
-
 /*************************************************
             DEFAULTS
 *************************************************/
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 *::after,
-*::before{
+*::before {
     box-sizing: inherit;
 }
-html{
-    font-size: 16px;
-    font-family:Raleway, "Helvetica Neue", Helvetica, Arial sans-serif;
+html {
+    font-size: 1em;
+    font-family: Raleway, "Helvetica Neue", Helvetica, Arial sans-serif;
     line-height: 1.5;
-    background-color: hsla(285, 0%, 70%, 1);
+   
 }
-p{
-    
+p {}
+a {
+    font-size: 1.414em;
+    color: hsla(360, 19%, 0%, 1);
+    text-decoration: none;
 }
-a{
-    
-}
-ul{
-    
-}
-ol{
-    
-}
-li{
-    
-}
-img{
+ul {}
+ol {}
+li {}
+img {
     width: 25%;
+}
+input {
+    width: 98%;
+    margin: 0.5rem;
+}
+select {
+    margin: 0.5rem;
+}
+button {
+    margin: 0.5rem;
+}
+textarea {
+    width: 98%;
+    height: 98%;
+    margin: 0.5rem;
 }
 
 /*************************************************
             HEADER
 *************************************************/
-header{
-    padding:1rem 2rem;
+
+header {
+    padding: 1rem 2rem;
     color: black;
+    font-size: 1.999em;
+    border-top-style: solid;
+    border-color: hsla(360, 19%, 0%, 1);
+    background-image: url(../img/lrg/oldfinger.jpg);
 }
-header > h1{
-    
-}
-header > h2{
-    
-}
+header > h1 {}
+header > h2 {}
+
 /*************************************************
             NAVMENU
 *************************************************/
-nav{
-    padding:1rem 2rem;
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    padding: 1rem 2rem;
+    background-color: hsla(285, 0%, 70%, 1);
 }
 nav > a,
 nav > a:visited,
-nav > a:link{
-    
-}
+nav > a:link {}
 nav > a:active,
 nav > a:focus,
-nav > a:hover{
-    
-}
+nav > a:hover {}
 
 /*************************************************
             MAIN CONTENT
 *************************************************/
-main{
-    padding:1rem 2rem;
+
+main {
+    padding: 1rem 2rem;
+    border
 }
-section{
-    
-}
-section p{
-    
-}
-section p img{
-    
-}
+section {}
+section p {}
+section p img {}
 
 /*************************************************
             FOOTER
 *************************************************/
-footer{
-    padding:1rem 2rem;
+
+footer {
+    padding: 1rem 2rem;
 }
-.foot nav{
-    
-}
-.foot section{
-    
-}
-.foot dl{
-    
-}
-.foot dt{
-    
-}
-.foot dd{
-    
-}
+.foot nav {}
+.foot section {}
+.foot dl {}
+.foot dt {}
+.foot dd {}
 .foot dd a,
-.foot dd a:visited{
-    
-}
+.foot dd a:visited {}
 .foot dd a:active,
 .foot dd a:focus,
-.foot dd a:hover{
-    
-}
+.foot dd a:hover {}
+
 /*************************************************
             MEDIA QUERIES for layout
 *************************************************/
-@media (max-width: 599px){
-    
+
+@media (max-width: 599px) {
+    .mainnav {
+        display: flex;
+        flex-direction: column;
+    }
+    main img {
+        width: 40%;
+        height: 40%;
+        float: left;
+        padding: 0.5rem;
+    }
+    main p {
+        font-size: 1.414em;
+    }
+    main h1 {
+        font-size: 1.999em;
+    }
+    main h2 {
+        font-size: 1.999em;
+    }
+    .main-link {
+        font-size: 1.999em;
+    }
+    section {
+        padding-bottom: 0.5rem;
+    }
+    section > h1,
+    section > h2 {
+        color: red;
+    }
+    header {
+        border-top: 10px solid red;
+    }
+    form {
+        border-top: 10px solid red;
+    }
+    a:hover {
+        color: red;
+    }
 }
-@media (min-width: 600px) and (max-width:999px){
-    
+@media (min-width: 600px) and (max-width:999px) {
+    .second {
+        display: inline-block;
+        width: 50%;
+    }
+    .third {
+        display: inline-block;
+        width: 49%;
+    }
+    section > h1,
+    section > h2 {
+        color: orange;
+    }
+    header {
+        border-top: 10px solid orange;
+    }
+    a:hover {
+        color: orange;
+    }
+    form {
+        border-top: 10px solid orange;
+    }
 }
-@media (min-width: 1000px){
-    
+@media (min-width: 1000px) {
+    main {
+        display: flex;
+        justify-content: space-between;
+    }
+    main img {
+        width: 60%;
+        height: 60%;
+        float: left;
+        padding: 0.5rem;
+    }
+    section > h1,
+    section >h2 {
+        color: green;
+    }
+    header {
+        border-top: 10px solid green;
+    }
+    .foot {
+        border-top: 10px solid green;
+        position: relative;
+    }
+    a:hover {
+        color: green;
+    }
+    .comments {
+        display: inline-block;
+        width: 100%;
+        float: left;
+    }
+    .subnav > dl {
+        display: inline-block;
+        width: 49%;
+        float: right;
+    }
 }
